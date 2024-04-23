@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-// Counter state provider
+
 final counterProvider = StateProvider((ref) => 0);
 
 void main() {
@@ -35,7 +35,7 @@ class MyHomePage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final counter = ref.watch(counterProvider); // Access the counter state
+    final counter = ref.watch(counterProvider); 
 
     return Scaffold(
       appBar: AppBar(
@@ -60,13 +60,13 @@ class MyHomePage extends ConsumerWidget {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             FloatingActionButton(
-              onPressed: () => ref.read(counterProvider.notifier).state++, // Increment
+              onPressed: () => ref.read(counterProvider.notifier).state++, 
               tooltip: 'Increment',
               child: const Icon(Icons.add),
             ),
             const SizedBox(width: 16.0),
             FloatingActionButton(
-              onPressed: () => ref.read(counterProvider.notifier).state--, // Decrement
+              onPressed: () => ref.read(counterProvider.notifier).state--, 
               tooltip: 'Decrement',
               child: const Icon(Icons.remove),
             ),
