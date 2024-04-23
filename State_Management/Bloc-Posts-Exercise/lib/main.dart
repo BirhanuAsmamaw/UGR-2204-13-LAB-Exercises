@@ -80,8 +80,10 @@ class _PostsScreenState extends State<PostsScreen> {
   }
 }
 
+
 void main() {
   runApp(MaterialApp(
+    title: 'Posts App',
     home: PostsScreen(),
   ));
 }
